@@ -1,19 +1,18 @@
-import { Header } from "./components/Header"
-import { PokeCard } from "./components/PokeCard"
-import { SideNav } from "./components/SideNav"
-import { TypeCard } from "./components/TypeCard"
-import { useState } from 'react'
+import { useState } from 'react';
+import Header from "./components/Header";
+import PokeCard from "./components/PokeCard";
+import SideNav from "./components/SideNav";
 
 function App() {
-  const [selectedPokemon, setSelectedPokemon] = useState(0)
+  const [selectedPokemon, setSelectedPokemon] = useState(0);
 
   return (
     <>
-    <Header />
-    <SideNav selectedPokemon={selectedPokemon} setSelectedPokemon={selectedPokemon} />
-    <PokeCard selectedPokemon={selectedPokemon} />
+      <Header />
+      <SideNav selectedPokemon={selectedPokemon} setSelectedPokemon={setSelectedPokemon} />
+      <PokeCard selectedPokemon={selectedPokemon} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
